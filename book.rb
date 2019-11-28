@@ -1,16 +1,11 @@
 class Book
-    attr_accessor :title, :author
-    def initialize(title, author, finished, count)
+    attr_reader :title, :author
+    attr_writer :finished
+    attr_accessor :count
+    def initialize(title, author)
         @title = title
         @author = author
-        @finished = finished
-        @count = count
-    end
-
-    def finished
         @finished = false
-    end
-    def count
-        @finished = 3
+        @count = 3
     end
 end
